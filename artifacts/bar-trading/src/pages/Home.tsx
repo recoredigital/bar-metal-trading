@@ -21,7 +21,7 @@ export default function Home() {
         {/* full-bleed image */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero-forging.png"
+            src="/images/hero-superalloy.png"
             alt=""
             className="w-full h-full object-cover"
           />

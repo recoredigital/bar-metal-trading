@@ -18,3 +18,9 @@ id = "nIZLIBzE4vTRODdMm7QyT"
 uri = "file://artifacts/bar-trading/public/images/materials-turbine.png"
 type = "image"
 title = "Aerospace turbine blades"
+
+[[generated]]
+id = "pzGjiWQhCl5_fUPkmwmzT"
+uri = "file://attached_assets/generated_images/ultra_close_macro_photograph_89a6.png"
+type = "image"
+title = "generated_image"
