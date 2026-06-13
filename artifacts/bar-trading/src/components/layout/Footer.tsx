@@ -4,52 +4,57 @@ import barLogoPath from "@assets/bar-trading-logo-transparent.png";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card">
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
+    <footer className="bg-card border-t border-border">
+      <div className="container mx-auto px-6 md:px-10 pt-16 pb-10">
 
-          <div className="md:col-span-2 flex flex-col items-start">
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <img src={barLogoPath} alt="BAR Trading Ltd" className="h-12 w-auto object-contain opacity-90" />
-            </Link>
-            <p className="text-muted-foreground text-sm max-w-md leading-relaxed mb-6">
-              Specialist trading house for high-performance superalloy metals. Precision materials for aerospace, energy, and advanced industrial applications.
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+          <div>
+            <img src={barLogoPath} alt="BAR Trading Ltd" className="h-10 w-auto mb-5 opacity-80" />
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+              Specialist trading house for high-performance superalloy metals. UK-based. Globally connected.
             </p>
           </div>
 
           <div>
-            <h4 className="font-heading font-semibold text-foreground mb-4 uppercase tracking-widest text-xs">Navigation</h4>
+            <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-5">Navigation</p>
             <ul className="space-y-3">
-              <li><Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
-              <li><Link href="/materials" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Materials & Alloys</Link></li>
-              <li><Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About Us</Link></li>
-              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
+              {[
+                ["Home",            "/"],
+                ["Materials & Alloys", "/materials"],
+                ["About Us",        "/about"],
+                ["Contact",         "/contact"],
+              ].map(([label, href]) => (
+                <li key={href}>
+                  <Link href={href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="font-heading font-semibold text-foreground mb-4 uppercase tracking-widest text-xs">Contact</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex flex-col">
-                <span className="font-medium text-foreground mb-1">Headquarters</span>
-                United Kingdom
-              </li>
-              <li className="flex flex-col mt-4">
-                <span className="font-medium text-foreground mb-1">Enquiries</span>
+            <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-5">Contact</p>
+            <div className="space-y-4 text-sm text-muted-foreground">
+              <div>
+                <p className="text-foreground font-medium mb-1">Registered Office</p>
+                <p>United Kingdom</p>
+              </div>
+              <div>
+                <p className="text-foreground font-medium mb-1">Enquiries</p>
                 <a href="mailto:enquiries@bartrading.co.uk" className="hover:text-foreground transition-colors">
                   enquiries@bartrading.co.uk
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
-
         </div>
 
-        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} BAR Trading Ltd. All rights reserved. Registered in England & Wales.</p>
-          <div className="flex gap-4">
+        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-muted-foreground tracking-wide">
+          <span>&copy; {new Date().getFullYear()} BAR Trading Ltd. Registered in England & Wales.</span>
+          <div className="flex gap-6">
             <span className="hover:text-foreground cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-foreground cursor-pointer transition-colors">Terms of Service</span>
+            <span className="hover:text-foreground cursor-pointer transition-colors">Terms</span>
           </div>
         </div>
       </div>
