@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "m5yGn5rFGl0CZFoLACwYI"
+uri = "file://artifacts/bar-trading/public/images/hero-forging.png"
+type = "image"
+title = "Glowing hot superalloy forging"
+
+[[generated]]
+id = "AJs1bHSOIIAaeBjkRangg"
+uri = "file://artifacts/bar-trading/public/images/about-trading.png"
+type = "image"
+title = "Industrial corporate trading floor"
+
+[[generated]]
+id = "nIZLIBzE4vTRODdMm7QyT"
+uri = "file://artifacts/bar-trading/public/images/materials-turbine.png"
+type = "image"
+title = "Aerospace turbine blades"

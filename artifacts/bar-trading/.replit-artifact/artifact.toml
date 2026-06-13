@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "BAR Trading Ltd"
+version = "1.0.0"
+id = "artifacts/bar-trading"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18976
+
+[services.development]
+run = "pnpm --filter @workspace/bar-trading run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/bar-trading", "run", "build" ]
+publicDir = "artifacts/bar-trading/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18976"
+BASE_PATH = "/"
