@@ -43,13 +43,13 @@ export default function About() {
               </motion.h2>
               <div className="space-y-5 text-muted-foreground text-base leading-relaxed font-light">
                 <motion.p variants={rise}>
-                  BAR Trading Ltd is a UK-based trading house dedicated exclusively to high-performance superalloy metals. We operate at the intersection of materials science and global industrial supply — sourcing and distributing the critical alloys that underpin some of the world's most demanding engineering applications.
+                  BAR Trading Ltd is a UK-based specialist trading house dedicated to high-performance superalloy metals. We buy surplus, excess, and off-specification stock from aerospace and industrial clients, and supply certified material to manufacturers, processors, and end users across the globe.
                 </motion.p>
                 <motion.p variants={rise}>
-                  Our focus is the superalloy sector: nickel-based, cobalt-based, titanium, and iron-nickel alloys specified in aerospace gas turbines, subsea oil and gas equipment, land-based power generation, marine propulsion, and medical device manufacture.
+                  We operate without a physical yard — an asset-light model that keeps us fast, flexible, and cost-competitive. Where material processing is required — cutting to length, re-testing, chemical analysis, or third-party re-certification — we coordinate it through our established network of approved specialist processors.
                 </motion.p>
                 <motion.p variants={rise}>
-                  We understand that buyers in these industries are not purchasing commodities. Every enquiry involves specific metallurgical requirements, tight dimensional tolerances, precise certification standards, and supply chain accountability. Our approach reflects that reality.
+                  Our focus is the superalloy sector: nickel-based, cobalt-based, titanium, and iron-nickel alloys specified in aerospace gas turbines, subsea oil and gas equipment, land-based power generation, marine propulsion, and medical device manufacture. We understand that buyers in these sectors are not purchasing commodities — and we respond accordingly.
                 </motion.p>
               </div>
             </motion.div>
@@ -59,10 +59,10 @@ export default function About() {
               className="divide-y divide-border pt-2"
             >
               {[
-                { n: "01", title: "Technical Understanding",  body: "We speak the language of materials engineers and procurement professionals alike — alloy designations, mechanical properties, heat treatment conditions, and applicable standards." },
-                { n: "02", title: "Relationship-Driven",     body: "Long-term working relationships with both buyers and sellers, prioritising reliability and transparency over transactional volume." },
-                { n: "03", title: "Global Supply Network",   body: "Access to premier mills, processors, and stockholders across Europe, North America, and Asia — ensuring traceability and provenance." },
-                { n: "04", title: "Focused Scope",           body: "We operate within a defined sector and we know it well. Our value lies in depth of specialisation, not breadth of catalogue." },
+                { n: "01", title: "We Buy & Sell",            body: "Active buyers of surplus, excess, and off-spec superalloy stock from aerospace OEMs, MROs, and industrial clients. Trusted suppliers to manufacturers and end users worldwide." },
+                { n: "02", title: "Processing Facilitation", body: "No physical yard — but we coordinate cutting, testing, chemical analysis, and third-party re-certification through our network of approved processors when required." },
+                { n: "03", title: "Global Supply Network",   body: "Established relationships with premier mills, stockholders, and processors across Europe, North America, and Asia — ensuring full traceability and provenance." },
+                { n: "04", title: "Technical Credibility",   body: "We speak the language of materials engineers: alloy designations, heat treatment conditions, AMS/ASTM standards, and certification requirements." },
               ].map((item, i) => (
                 <motion.div key={i} variants={rise} className="py-7">
                   <p className="text-[10px] font-mono text-muted-foreground mb-3">{item.n}</p>

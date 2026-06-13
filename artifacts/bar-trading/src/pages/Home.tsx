@@ -42,7 +42,7 @@ export default function Home() {
               Precision Metals<br />for Extreme<br />Environments.
             </motion.h1>
             <motion.p variants={rise} className="text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-lg font-light">
-              BAR Trading Ltd sources and supplies high-performance superalloys — the critical materials behind aerospace turbines, subsea drilling equipment, and industrial power generation.
+              BAR Trading Ltd buys and sells high-performance superalloys across the global aerospace, energy, and industrial supply chain. We source surplus inventory, supply to manufacturers, and coordinate processing where required.
             </motion.p>
             <motion.div variants={rise} className="flex flex-wrap gap-4">
               <Link href="/materials">
@@ -122,10 +122,10 @@ export default function Home() {
               className="grid grid-cols-2 gap-px bg-border"
             >
               {[
-                { num: "01", title: "Assured Quality",   body: "Materials certified to aerospace and international standards." },
-                { num: "02", title: "Global Network",    body: "Deep relationships with premier mills and processors worldwide." },
-                { num: "03", title: "Extensive Range",   body: "Nickel, Cobalt, Titanium, and Iron-Nickel alloy families." },
-                { num: "04", title: "Technical Acumen",  body: "Deep understanding of metallurgical properties and end applications." },
+                { num: "01", title: "Buy & Sell",             body: "Active buyers of surplus, excess, and off-specification superalloy stock. Trusted suppliers to manufacturers, processors, and end users." },
+                { num: "02", title: "Processing Facilitation", body: "No physical yard — but where cutting, re-certification, testing, or re-processing is needed, we coordinate it through our network of approved specialist processors." },
+                { num: "03", title: "Global Network",          body: "Deep relationships with premier mills, stockholders, and processors across Europe, North America, and Asia." },
+                { num: "04", title: "Technical Acumen",        body: "We understand alloy designations, mechanical properties, heat treatment conditions, and certification standards." },
               ].map((f, i) => (
                 <motion.div key={i} variants={rise} className="bg-card p-7 hover:bg-background transition-colors">
                   <p className="text-[10px] font-mono text-muted-foreground mb-4">{f.num}</p>

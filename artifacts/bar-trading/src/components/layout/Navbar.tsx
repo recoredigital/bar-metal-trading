@@ -31,7 +31,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 md:px-10 h-[72px] flex items-center justify-between">
 
         <Link href="/" className="flex items-center" data-testid="nav-logo">
-          <img src={barLogoPath} alt="BAR Trading Ltd" className="h-9 w-auto" />
+          <img src={barLogoPath} alt="BAR Trading Ltd" className="h-16 w-auto" />
         </Link>
 
         {/* Desktop */}

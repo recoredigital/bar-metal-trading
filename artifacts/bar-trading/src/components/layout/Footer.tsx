@@ -9,7 +9,7 @@ export function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div>
-            <img src={barLogoPath} alt="BAR Trading Ltd" className="h-10 w-auto mb-5 opacity-80" />
+            <img src={barLogoPath} alt="BAR Trading Ltd" className="h-14 w-auto mb-5 opacity-80" />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               Specialist trading house for high-performance superalloy metals. UK-based. Globally connected.
             </p>
