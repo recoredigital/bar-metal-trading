@@ -37,7 +37,7 @@ export function Footer() {
             <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-5">Contact</p>
             <div className="space-y-4 text-sm text-muted-foreground">
               <div>
-                <p className="text-foreground font-medium mb-1">Registered Office</p>
+                <p className="text-foreground font-medium mb-1">Office</p>
                 <p>United Kingdom</p>
               </div>
               <div>

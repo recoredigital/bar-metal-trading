@@ -80,7 +80,7 @@ export default function Home() {
               { n: "16+",  label: "Alloy Grades" },
               { n: "4",    label: "Alloy Families" },
               { n: "5",    label: "Industries Served" },
-              { n: "UK",   label: "Registered Trading House" },
+              { n: "UK",   label: "Based Trading House" },
             ].map((s, i) => (
               <motion.div key={i} variants={rise} className="py-10 px-8 text-center" style={{ borderColor: "hsl(0 0% 82%)" }}>
                 <div className="text-4xl md:text-5xl font-extrabold font-heading tracking-tight mb-1.5" style={{ color: "hsl(0 0% 7%)" }}>
