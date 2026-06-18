@@ -179,11 +179,12 @@ export default function Contact() {
                   <motion.div variants={rise}>
                     <label className={labelCls}>Material / Alloy of Interest</label>
                     <select name="material" value={form.material} onChange={onChange}
-                      className="w-full bg-transparent border-b border-border text-foreground py-3 text-sm focus:outline-none focus:border-foreground transition-colors font-light appearance-none"
+                      style={{ colorScheme: "dark" }}
+                      className="w-full bg-background border-b border-border text-foreground py-3 text-sm focus:outline-none focus:border-foreground transition-colors font-light appearance-none"
                       data-testid="select-material"
                     >
-                      <option value="">Select an alloy (optional)</option>
-                      {alloyOptions.map(a => <option key={a} value={a}>{a}</option>)}
+                      <option value="" className="bg-background text-foreground">Select an alloy (optional)</option>
+                      {alloyOptions.map(a => <option key={a} value={a} className="bg-background text-foreground">{a}</option>)}
                     </select>
                   </motion.div>
 
