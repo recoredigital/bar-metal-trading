@@ -26,6 +26,23 @@ export default function Contact() {
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm(p => ({ ...p, [e.target.name]: e.target.value }));
 
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(
+      `Website Enquiry – ${form.name}${form.company ? ` (${form.company})` : ""}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${form.name}\n` +
+      `Company: ${form.company || "N/A"}\n` +
+      `Email: ${form.email}\n` +
+      `Phone: ${form.phone || "N/A"}\n` +
+      `Material / Alloy: ${form.material || "Not specified"}\n\n` +
+      `Requirements:\n${form.message}`
+    );
+    window.location.href = `mailto:info@bartrading.co.uk?subject=${subject}&body=${body}`;
+    setSubmitted(true);
+  };
+
   return (
     <div className="w-full">
 
@@ -111,7 +128,7 @@ export default function Contact() {
               ) : (
                 <motion.form
                   initial="hidden" animate="visible" variants={stagger}
-                  onSubmit={e => { e.preventDefault(); setSubmitted(true); }}
+                  onSubmit={onSubmit}
                   className="space-y-8"
                   data-testid="contact-form"
                 >
