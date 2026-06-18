@@ -1,14 +1,19 @@
 import { Router } from "express";
-import { ReplitConnectors } from "@replit/connectors-sdk";
 
 const router = Router();
-const connectors = new ReplitConnectors();
 
 router.post("/enquiry", async (req, res) => {
   const { name, company, email, phone, material, message } = req.body as Record<string, string>;
 
   if (!name || !email || !message) {
     res.status(400).json({ error: "Name, email, and requirements are required." });
+    return;
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    req.log.error("RESEND_API_KEY is not set");
+    res.status(500).json({ error: "Email service not configured. Please contact us directly at info@bartrading.co.uk" });
     return;
   }
 
@@ -32,9 +37,12 @@ router.post("/enquiry", async (req, res) => {
   `;
 
   try {
-    const response = await connectors.proxy("resend", "/emails", {
+    const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Authorization": `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         from: "BAR Trading Website <onboarding@resend.dev>",
         to: ["info@bartrading.co.uk"],
@@ -45,7 +53,7 @@ router.post("/enquiry", async (req, res) => {
       }),
     });
 
-    const data = await response.json() as { id?: string; statusCode?: number; message?: string };
+    const data = await response.json() as { id?: string; name?: string; message?: string };
 
     if (!response.ok) {
       req.log.error({ data }, "Resend API error");
