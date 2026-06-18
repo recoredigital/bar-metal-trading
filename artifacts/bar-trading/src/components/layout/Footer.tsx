@@ -53,6 +53,7 @@ export function Footer() {
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-muted-foreground tracking-wide">
           <span>&copy; {new Date().getFullYear()} BAR Trading Ltd. Registered in England & Wales.</span>
           <div className="flex gap-6">
+            <Link href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link href="/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link>
             <Link href="/terms" className="hover:text-foreground transition-colors">Terms</Link>
             <Link href="/supplier-code-of-conduct" className="hover:text-foreground transition-colors">

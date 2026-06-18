@@ -14,6 +14,7 @@ import Contact from "@/pages/Contact";
 import SupplierCode from "@/pages/SupplierCode";
 import Terms from "@/pages/Terms";
 import CookiePolicy from "@/pages/CookiePolicy";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ function Router() {
       <Route path="/supplier-code-of-conduct" component={SupplierCode} />
       <Route path="/terms" component={Terms} />
       <Route path="/cookie-policy" component={CookiePolicy} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route component={NotFound} />
     </Switch>
   );
