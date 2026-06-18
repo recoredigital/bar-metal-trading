@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, MapPin, Mail } from "lucide-react";
+import { useSeo } from "@/hooks/useSeo";
 
 const rise = {
   hidden:  { opacity: 0, y: 20 },
@@ -20,6 +21,10 @@ const inputCls = "w-full bg-transparent border-b border-border text-foreground p
 const labelCls = "block text-[10px] font-semibold tracking-[0.22em] uppercase text-muted-foreground mb-2";
 
 export default function Contact() {
+  useSeo(
+    "Enquiries | BAR Trading Ltd",
+    "Submit a material enquiry to BAR Trading Ltd. We buy and sell Inconel, Hastelloy, Waspaloy, Stellite and other superalloys. All enquiries treated in strict confidence."
+  );
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);

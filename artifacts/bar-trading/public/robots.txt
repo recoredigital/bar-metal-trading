@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://bartrading.co.uk/sitemap.xml

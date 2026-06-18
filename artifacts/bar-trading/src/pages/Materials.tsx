@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import { useSeo } from "@/hooks/useSeo";
 
 const rise = {
   hidden:  { opacity: 0, y: 20 },
@@ -60,6 +61,10 @@ const families = [
 ];
 
 export default function Materials() {
+  useSeo(
+    "Materials We Trade | BAR Trading Ltd",
+    "We trade Inconel 625, Inconel 718, Hastelloy X, Waspaloy, Stellite 6, titanium alloys and more. Bar, billet, sheet, plate and forgings. Contact us with your requirements."
+  );
   const [active, setActive] = useState("nickel");
   const family = families.find(f => f.id === active)!;
 

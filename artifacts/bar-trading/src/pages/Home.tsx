@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import { useSeo } from "@/hooks/useSeo";
 
 const rise = {
   hidden:  { opacity: 0, y: 24 },
@@ -13,6 +14,10 @@ const stagger = {
 };
 
 export default function Home() {
+  useSeo(
+    "BAR Trading Ltd | Superalloy & Nickel Alloy Trader, UK",
+    "UK superalloy trading house specialising in Inconel, Hastelloy, Waspaloy, Stellite and titanium alloys. Buying and selling prime and surplus stock for aerospace and industrial applications."
+  );
   return (
     <div className="w-full">
 

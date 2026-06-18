@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import { useSeo } from "@/hooks/useSeo";
 
 const rise = {
   hidden:  { opacity: 0, y: 20 },
@@ -10,6 +11,10 @@ const rise = {
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
 
 export default function About() {
+  useSeo(
+    "About BAR Trading Ltd | UK Superalloy Metals Trader",
+    "BAR Trading Ltd is a UK-based superalloy metals trading house. Asset-light and relationship-driven, we operate across aerospace and industrial supply chains worldwide."
+  );
   return (
     <div className="w-full">
 
