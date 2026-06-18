@@ -33,15 +33,30 @@ export default function Contact() {
     setSending(true);
     setError(null);
     try {
-      const res = await fetch("/api/enquiry", {
+      const subject = `New Enquiry${form.company ? ` from ${form.company}` : ""}${form.material ? ` — ${form.material}` : ""}`;
+      const message = [
+        `Name: ${form.name}`,
+        form.company ? `Company: ${form.company}` : null,
+        `Email: ${form.email}`,
+        form.phone ? `Phone: ${form.phone}` : null,
+        form.material ? `Material: ${form.material}` : null,
+        ``,
+        form.message,
+      ].filter(Boolean).join("\n");
+
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "60ee7bae-30e4-4868-af76-ae91598d0fb6",
+          subject,
+          from_name: form.name,
+          replyto: form.email,
+          message,
+        }),
       });
-      if (!res.ok) {
-        const data = await res.json() as { error?: string };
-        throw new Error(data.error ?? "Something went wrong.");
-      }
+      const data = await res.json() as { success: boolean; message?: string };
+      if (!data.success) throw new Error(data.message ?? "Something went wrong.");
       setSubmitted(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
