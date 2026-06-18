@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm --filter @workspace/bar-trading run build",
+  "outputDirectory": "artifacts/bar-trading/dist/public",
+  "installCommand": "pnpm install",
+  "framework": null
+}

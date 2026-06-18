@@ -1,12 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Link } from "wouter";
 
-const rise = {
+const rise: Variants = {
   hidden:  { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
 };
-const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
+const stagger: Variants = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
 
 function Bullet({ text }: { text: string }) {
   return (
