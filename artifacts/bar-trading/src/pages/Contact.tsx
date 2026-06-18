@@ -21,26 +21,33 @@ const labelCls = "block text-[10px] font-semibold tracking-[0.22em] uppercase te
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", material: "", message: "" });
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm(p => ({ ...p, [e.target.name]: e.target.value }));
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `Website Enquiry – ${form.name}${form.company ? ` (${form.company})` : ""}`
-    );
-    const body = encodeURIComponent(
-      `Name: ${form.name}\n` +
-      `Company: ${form.company || "N/A"}\n` +
-      `Email: ${form.email}\n` +
-      `Phone: ${form.phone || "N/A"}\n` +
-      `Material / Alloy: ${form.material || "Not specified"}\n\n` +
-      `Requirements:\n${form.message}`
-    );
-    window.location.href = `mailto:info@bartrading.co.uk?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    setSending(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const data = await res.json() as { error?: string };
+        throw new Error(data.error ?? "Something went wrong.");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -178,14 +185,20 @@ export default function Contact() {
                   <motion.div variants={rise} className="pt-2">
                     <button
                       type="submit"
-                      className="h-12 px-10 bg-foreground text-background text-[11px] font-semibold tracking-[0.2em] uppercase hover:opacity-90 transition-opacity"
+                      disabled={sending}
+                      className="h-12 px-10 bg-foreground text-background text-[11px] font-semibold tracking-[0.2em] uppercase hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                       data-testid="button-submit"
                     >
-                      Submit Enquiry
+                      {sending ? "Sending…" : "Submit Enquiry"}
                     </button>
-                    <p className="text-[11px] text-muted-foreground mt-4 font-light">
-                      All enquiries are treated in strict confidence.
-                    </p>
+                    {error && (
+                      <p className="text-[12px] text-red-400 mt-4 font-light">{error}</p>
+                    )}
+                    {!error && (
+                      <p className="text-[11px] text-muted-foreground mt-4 font-light">
+                        All enquiries are treated in strict confidence.
+                      </p>
+                    )}
                   </motion.div>
                 </motion.form>
               )}
