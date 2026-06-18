@@ -42,8 +42,8 @@ export function Footer() {
               </div>
               <div>
                 <p className="text-foreground font-medium mb-1">Enquiries</p>
-                <a href="mailto:enquiries@bartrading.co.uk" className="hover:text-foreground transition-colors">
-                  enquiries@bartrading.co.uk
+                <a href="mailto:info@bartrading.co.uk" className="hover:text-foreground transition-colors">
+                  info@bartrading.co.uk
                 </a>
               </div>
             </div>
@@ -51,7 +51,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-muted-foreground tracking-wide">
-          <span>&copy; {new Date().getFullYear()} BAR Trading Ltd. Registered in England & Wales.</span>
+          <span>&copy; {new Date().getFullYear()} BAR Trading. United Kingdom.</span>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link href="/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link>

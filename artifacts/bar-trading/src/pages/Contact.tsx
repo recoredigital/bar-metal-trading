@@ -69,8 +69,8 @@ export default function Contact() {
                     <Mail className="text-muted-foreground mt-0.5 flex-shrink-0" size={15} strokeWidth={1.5} />
                     <div>
                       <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-1.5">Enquiries</p>
-                      <a href="mailto:enquiries@bartrading.co.uk" className="text-sm font-light text-foreground/80 hover:text-foreground transition-colors" data-testid="contact-email-link">
-                        enquiries@bartrading.co.uk
+                      <a href="mailto:info@bartrading.co.uk" className="text-sm font-light text-foreground/80 hover:text-foreground transition-colors" data-testid="contact-email-link">
+                        info@bartrading.co.uk
                       </a>
                     </div>
                   </div>
