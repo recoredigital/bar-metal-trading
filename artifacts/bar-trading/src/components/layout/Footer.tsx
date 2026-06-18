@@ -54,7 +54,7 @@ export function Footer() {
           <span>&copy; {new Date().getFullYear()} BAR Trading Ltd. Registered in England & Wales.</span>
           <div className="flex gap-6">
             <span className="hover:text-foreground cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-foreground cursor-pointer transition-colors">Terms</span>
+            <Link href="/terms" className="hover:text-foreground transition-colors">Terms</Link>
             <Link href="/supplier-code-of-conduct" className="hover:text-foreground transition-colors">
               Supplier Code of Conduct
             </Link>
