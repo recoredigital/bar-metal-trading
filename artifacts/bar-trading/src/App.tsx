@@ -11,6 +11,7 @@ import Home from "@/pages/Home";
 import Materials from "@/pages/Materials";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
+import SupplierCode from "@/pages/SupplierCode";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/materials" component={Materials} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/supplier-code-of-conduct" component={SupplierCode} />
       <Route component={NotFound} />
     </Switch>
   );
