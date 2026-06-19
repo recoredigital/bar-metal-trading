@@ -1,0 +1,2 @@
+- [Framer-motion ease typing](framer-motion-ease.md) — ease: number[] fails strict TS; must use as const for cubic bezier arrays
+- [Vercel redeploy pitfall](vercel-redeploy.md) — "Redeploy" on old deployments rebuilds that specific commit, not latest GitHub HEAD
