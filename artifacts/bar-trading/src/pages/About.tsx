@@ -54,7 +54,7 @@ export default function About() {
                   We operate without a physical yard — an asset-light model that keeps us fast, flexible, and cost-competitive. Where material processing is required — cutting to length, re-testing, chemical analysis, or third-party re-certification — we coordinate it through our established network of approved specialist processors.
                 </motion.p>
                 <motion.p variants={rise}>
-                  Our core focus is the superalloy sector — nickel-based, cobalt-based, titanium, and iron-nickel alloys specified in aerospace gas turbines, subsea oil and gas equipment, power generation, marine propulsion, and medical device manufacture. We also trade stainless steel, copper, and brass grades where our clients require a broader non-ferrous supply relationship. We understand that buyers in these sectors are not purchasing commodities — and we respond accordingly.
+                  We trade across the full non-ferrous spectrum — high-performance superalloys (nickel-based, cobalt-based, titanium, and iron-nickel alloys) through to aluminium alloys, stainless steel, copper, and brass. Our superalloy capability covers alloys specified in aerospace gas turbines, subsea oil and gas equipment, power generation, marine propulsion, and medical device manufacture. Across every material family, we understand that buyers in these sectors are not purchasing commodities — and we respond accordingly.
                 </motion.p>
               </div>
             </motion.div>
