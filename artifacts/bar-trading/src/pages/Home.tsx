@@ -82,8 +82,8 @@ export default function Home() {
             style={{ borderColor: "hsl(0 0% 82%)" }}
           >
             {[
-              { n: "16+",  label: "Alloy Grades" },
-              { n: "4",    label: "Alloy Families" },
+              { n: "25+",  label: "Grades Traded" },
+              { n: "7",    label: "Alloy Families" },
               { n: "5",    label: "Industries Served" },
               { n: "UK",   label: "Based Trading House" },
             ].map((s, i) => (
@@ -221,6 +221,9 @@ export default function Home() {
                   { fam: "Cobalt-based Superalloys",  gr: "Stellite 6 · 21 · Haynes 188 · MP35N" },
                   { fam: "Titanium Alloys",           gr: "Ti-6Al-4V · Ti-6Al-2Sn-4Zr-2Mo · Ti-3Al-2.5V" },
                   { fam: "Iron-Nickel Alloys",        gr: "Incoloy 825 · 925 · A286" },
+                  { fam: "Stainless Steel",           gr: "304 / 316 / 321 · 347 · 17-4 PH" },
+                  { fam: "Copper",                    gr: "C101 ETP · C110 OFHC · C122 PDO" },
+                  { fam: "Brass",                     gr: "CZ108 · CZ121 Free-Cutting · CZ112 Naval" },
                 ].map((m, i) => (
                   <motion.div key={i} variants={rise} className="py-5 flex items-start justify-between gap-6">
                     <div>

@@ -33,7 +33,7 @@ export default function CookiePolicy() {
               Cookie<br />Policy
             </motion.h1>
             <motion.p variants={rise} className="text-sm text-muted-foreground font-light">
-              Last Updated: June 2026
+              Last Updated: June 2024
             </motion.p>
           </motion.div>
         </div>

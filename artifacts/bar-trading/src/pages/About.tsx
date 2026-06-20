@@ -54,7 +54,7 @@ export default function About() {
                   We operate without a physical yard — an asset-light model that keeps us fast, flexible, and cost-competitive. Where material processing is required — cutting to length, re-testing, chemical analysis, or third-party re-certification — we coordinate it through our established network of approved specialist processors.
                 </motion.p>
                 <motion.p variants={rise}>
-                  Our focus is the superalloy sector: nickel-based, cobalt-based, titanium, and iron-nickel alloys specified in aerospace gas turbines, subsea oil and gas equipment, land-based power generation, marine propulsion, and medical device manufacture. We understand that buyers in these sectors are not purchasing commodities — and we respond accordingly.
+                  Our core focus is the superalloy sector — nickel-based, cobalt-based, titanium, and iron-nickel alloys specified in aerospace gas turbines, subsea oil and gas equipment, power generation, marine propulsion, and medical device manufacture. We also trade stainless steel, copper, and brass grades where our clients require a broader non-ferrous supply relationship. We understand that buyers in these sectors are not purchasing commodities — and we respond accordingly.
                 </motion.p>
               </div>
             </motion.div>
@@ -94,14 +94,17 @@ export default function About() {
 
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-x"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-0 divide-y sm:divide-y-0 sm:divide-x flex-wrap"
             style={{ borderColor: "hsl(0 0% 82%)" }}
           >
             {[
-              { label: "Nickel-based",  grades: "Inconel 625 · 718\nWaspaloy · Hastelloy X\nRené 41",           note: "The most widely specified class of superalloy in aerospace and energy." },
-              { label: "Cobalt-based",  grades: "Stellite 6 · 21\nHaynes 188 · MP35N",                         note: "Superior wear and hot corrosion resistance in valve, turbine, and medical applications." },
-              { label: "Titanium",      grades: "Ti-6Al-4V\nTi-6Al-2Sn-4Zr-2Mo\nTi-3Al-2.5V",                 note: "Exceptional strength-to-weight for airframe, engine, and medical structures." },
-              { label: "Iron-Nickel",   grades: "Incoloy 825 · 925\nA286",                                      note: "Performance in corrosive environments and elevated-temperature service." },
+              { label: "Nickel-based",    grades: "Inconel 625 · 718\nWaspaloy · Hastelloy X\nRené 41",           note: "The most widely specified class of superalloy in aerospace and energy." },
+              { label: "Cobalt-based",    grades: "Stellite 6 · 21\nHaynes 188 · MP35N",                         note: "Superior wear and hot corrosion resistance in valve, turbine, and medical applications." },
+              { label: "Titanium",        grades: "Ti-6Al-4V\nTi-6Al-2Sn-4Zr-2Mo\nTi-3Al-2.5V",                 note: "Exceptional strength-to-weight for airframe, engine, and medical structures." },
+              { label: "Iron-Nickel",     grades: "Incoloy 825 · 925\nA286",                                      note: "Performance in corrosive environments and elevated-temperature service." },
+              { label: "Stainless Steel", grades: "304 · 316 · 321\n347 · 17-4 PH",                              note: "Austenitic and precipitation-hardening grades for industrial and structural applications." },
+              { label: "Copper",          grades: "C101 ETP\nC110 OFHC · C122 PDO",                              note: "High-purity grades for electrical, thermal, and plumbing applications." },
+              { label: "Brass",           grades: "CZ108 · CZ121\nCZ112 Naval Brass",                            note: "Copper-zinc alloys for precision machined components, marine, and decorative applications." },
             ].map((item, i) => (
               <motion.div key={i} variants={rise} className="px-8 py-8 first:pl-0 last:pr-0" style={{ borderColor: "hsl(0 0% 82%)" }}>
                 <p className="text-[11px] font-semibold tracking-[0.2em] uppercase mb-5" style={{ color: "hsl(0 0% 44%)" }}>{item.label}</p>

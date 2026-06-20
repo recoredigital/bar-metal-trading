@@ -58,6 +58,42 @@ const families = [
       { name: "A286",         props: "Iron-base superalloy with high strength and good corrosion resistance to 700°C.", apps: "Jet engine components, high-temperature fasteners, offshore oil and gas structural parts." },
     ],
   },
+  {
+    id: "stainless",
+    label: "05",
+    name: "Stainless Steel",
+    summary: "Versatile corrosion-resistant steels covering austenitic, martensitic, and precipitation-hardening grades for industrial and structural applications.",
+    alloys: [
+      { name: "304 / 304L",   props: "Standard austenitic grade with excellent formability and good corrosion resistance. 304L offers improved weldability with lower carbon content.", apps: "Food processing equipment, architectural components, chemical vessels, heat exchangers." },
+      { name: "316 / 316L",   props: "Molybdenum-enhanced austenitic grade with superior resistance to pitting and crevice corrosion, especially in chloride environments.", apps: "Marine hardware, pharmaceutical equipment, surgical instruments, offshore structures." },
+      { name: "321",          props: "Titanium-stabilised austenitic grade resistant to sensitisation and intergranular corrosion after welding.", apps: "Exhaust systems, aircraft components, high-temperature chemical processing equipment." },
+      { name: "347",          props: "Niobium-stabilised austenitic grade providing excellent resistance to intergranular corrosion and elevated-temperature service.", apps: "Pressure vessels, aircraft exhaust manifolds, chemical process equipment." },
+      { name: "17-4 PH",      props: "Precipitation-hardening martensitic grade combining high strength with moderate corrosion resistance. Age-hardenable to a range of strength levels.", apps: "Aerospace structural parts, nuclear waste casks, chemical process equipment, oil and gas valve components." },
+    ],
+  },
+  {
+    id: "copper",
+    label: "06",
+    name: "Copper",
+    summary: "High-purity copper grades offering exceptional electrical and thermal conductivity with good corrosion resistance across a wide range of environments.",
+    alloys: [
+      { name: "C101 — Electrolytic Tough Pitch (ETP)", props: "99.9% minimum copper. Outstanding electrical conductivity (100% IACS). Standard grade for electrical applications.", apps: "Busbars, electrical conductors, transformers, commutators, roofing and cladding." },
+      { name: "C110 — Oxygen-Free High Conductivity (OFHC)", props: "99.99% minimum copper, oxygen-free. Excellent electrical conductivity with superior ductility and resistance to hydrogen embrittlement.", apps: "Vacuum tube components, waveguides, high-purity electrical connectors, cryogenic equipment." },
+      { name: "C122 — Phosphorus Deoxidised (PDO)", props: "Deoxidised with phosphorus residuals, giving excellent brazeability and weldability without susceptibility to hydrogen embrittlement.", apps: "Plumbing tube and fittings, heat exchangers, refrigeration and air conditioning systems." },
+    ],
+  },
+  {
+    id: "brass",
+    label: "07",
+    name: "Brass",
+    summary: "Copper-zinc alloys combining good strength, excellent machinability, and attractive corrosion resistance for engineering and decorative applications.",
+    alloys: [
+      { name: "CZ108 / C22000 — Commercial Bronze", props: "Low-zinc brass (10% Zn) with excellent cold working characteristics, good corrosion resistance, and attractive golden colour.", apps: "Decorative hardware, costume jewellery, architectural metalwork, coins and medallions." },
+      { name: "CZ121 / C36000 — Free-Cutting Brass", props: "60/40 brass with 3% lead addition giving excellent machinability ratings. The industry standard for high-volume screw machined parts.", apps: "Precision turned components, fittings, valves, gears, fasteners, plumbing hardware." },
+      { name: "CZ112 / C46400 — Naval Brass", props: "70/30 brass with 1% tin addition providing enhanced resistance to dezincification and sea water corrosion.", apps: "Marine propeller shafts, condenser plates, heat exchanger tubes, turnbuckles, marine hardware." },
+      { name: "CW617N / C38500 — Architectural Brass", props: "High-strength brass with good machinability and a uniform surface finish suitable for anodising and plating.", apps: "Door handles, locks, window fittings, sanitary ware, decorative architectural components." },
+    ],
+  },
 ];
 
 export default function Materials() {
@@ -84,7 +120,7 @@ export default function Materials() {
               Materials<br />&amp; Alloys
             </motion.h1>
             <motion.p variants={rise} className="text-base text-muted-foreground leading-relaxed font-light max-w-xl">
-              Comprehensive specifications for the high-performance superalloys we source and supply. Grouped by alloy family — each with key properties and principal applications.
+              Full specifications for the metals and alloys we source and supply — from high-performance superalloys to stainless steel, copper, and brass. Grouped by alloy family, each with key properties and principal applications.
             </motion.p>
           </motion.div>
         </div>
@@ -126,7 +162,7 @@ export default function Materials() {
           {/* Family header */}
           <div className="mb-14 pb-10 border-b border-border flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-              <p className="text-[11px] font-mono text-muted-foreground mb-3">{family.label} / 04</p>
+              <p className="text-[11px] font-mono text-muted-foreground mb-3">{family.label} / 07</p>
               <h2 className="text-3xl md:text-4xl font-extrabold font-heading tracking-tight mb-4">{family.name}</h2>
               <p className="text-muted-foreground font-light max-w-xl leading-relaxed">{family.summary}</p>
             </div>
