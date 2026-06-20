@@ -39,7 +39,7 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-10 relative z-10 pb-20 md:pb-28">
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl">
             <motion.p variants={rise} className="text-[11px] font-medium tracking-[0.3em] uppercase text-muted-foreground mb-8">
-              United Kingdom — Superalloy Trading House
+              United Kingdom — Non Ferrous Trading
             </motion.p>
             <motion.h1 variants={rise}
               className="text-[clamp(3rem,7vw,5.5rem)] font-extrabold font-heading leading-[1.0] tracking-tight text-foreground mb-8"
