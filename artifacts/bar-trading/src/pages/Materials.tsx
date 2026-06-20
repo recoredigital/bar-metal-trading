@@ -6,7 +6,7 @@ import { useSeo } from "@/hooks/useSeo";
 
 const rise: Variants = {
   hidden:  { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
 };
 const stagger: Variants = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
 
@@ -156,7 +156,7 @@ export default function Materials() {
           key={active}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
           className="container mx-auto px-6 md:px-10 py-16 md:py-20"
         >
           {/* Family header */}
@@ -178,7 +178,7 @@ export default function Materials() {
                 key={alloy.name}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] as const }}
+                transition={{ delay: i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                 className="py-10 grid grid-cols-1 md:grid-cols-3 gap-8"
                 data-testid={`alloy-card-${alloy.name.toLowerCase().replace(/[\s()/]+/g, '-')}`}
               >
