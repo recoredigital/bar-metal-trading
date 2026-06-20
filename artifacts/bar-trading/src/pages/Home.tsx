@@ -16,7 +16,7 @@ const stagger: Variants = {
 export default function Home() {
   useSeo(
     "BAR Trading Ltd | Superalloy & Nickel Alloy Trader, UK",
-    "UK superalloy trading house specialising in Inconel, Hastelloy, Waspaloy, Stellite and titanium alloys. Buying and selling prime and surplus stock for aerospace and industrial applications."
+    "UK non-ferrous metals trading house specialising in superalloys, aluminium, copper, brass, and stainless steel. Buying and selling prime and surplus stock for aerospace, energy, and industrial applications."
   );
   return (
     <div className="w-full">
@@ -47,7 +47,7 @@ export default function Home() {
               Precision Metals<br />for Extreme<br />Environments.
             </motion.h1>
             <motion.p variants={rise} className="text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-lg font-light">
-              BAR Trading Ltd buys and sells high-performance superalloys across the global aerospace, energy, and industrial supply chain. We source surplus inventory, supply to manufacturers, and coordinate processing where required.
+              BAR Trading Ltd buys and sells non-ferrous metals and high-performance superalloys across the global aerospace, energy, and industrial supply chain — from nickel and titanium alloys to aluminium, copper, brass, and stainless steel. We source surplus inventory, supply to manufacturers, and coordinate processing where required.
             </motion.p>
             <motion.div variants={rise} className="flex flex-wrap gap-4">
               <Link href="/materials">
@@ -127,7 +127,7 @@ export default function Home() {
               className="grid grid-cols-2 gap-px bg-border"
             >
               {[
-                { num: "01", title: "Buy & Sell",             body: "Active buyers of surplus, excess, and off-specification superalloy stock. Trusted suppliers to manufacturers, processors, and end users." },
+                { num: "01", title: "Buy & Sell",             body: "Active buyers of surplus, excess, and off-specification non-ferrous metals and superalloys. Trusted suppliers to manufacturers, processors, and end users." },
                 { num: "02", title: "Processing Facilitation", body: "No physical yard — but where cutting, re-certification, testing, or re-processing is needed, we coordinate it through our network of approved specialist processors." },
                 { num: "03", title: "Global Network",          body: "Deep relationships with premier mills, stockholders, and processors across Europe, North America, and Asia." },
                 { num: "04", title: "Technical Acumen",        body: "We understand alloy designations, mechanical properties, heat treatment conditions, and certification standards." },

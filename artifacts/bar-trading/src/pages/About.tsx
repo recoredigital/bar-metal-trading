@@ -13,7 +13,7 @@ const stagger: Variants = { hidden: {}, visible: { transition: { staggerChildren
 export default function About() {
   useSeo(
     "About BAR Trading Ltd | UK Superalloy Metals Trader",
-    "BAR Trading Ltd is a UK-based superalloy metals trading house. Asset-light and relationship-driven, we operate across aerospace and industrial supply chains worldwide."
+    "BAR Trading Ltd is a UK-based non-ferrous metals trading house. We trade superalloys, aluminium, copper, brass, and stainless steel — asset-light and relationship-driven, operating across global aerospace and industrial supply chains."
   );
   return (
     <div className="w-full">
@@ -31,7 +31,7 @@ export default function About() {
               About<br />BAR Trading
             </motion.h1>
             <motion.p variants={rise} className="text-base text-muted-foreground font-light leading-relaxed max-w-xl">
-              A specialist metals trading house focused on the high-performance superalloy sector. UK-based, globally connected, technically credible.
+              A specialist non-ferrous metals trading house. Superalloys, aluminium, copper, brass, and stainless steel. UK-based, globally connected, technically credible.
             </motion.p>
           </motion.div>
         </div>
@@ -48,7 +48,7 @@ export default function About() {
               </motion.h2>
               <div className="space-y-5 text-muted-foreground text-base leading-relaxed font-light">
                 <motion.p variants={rise}>
-                  BAR Trading Ltd is a UK-based specialist trading house dedicated to high-performance superalloy metals. We buy surplus, excess, and off-specification stock from aerospace and industrial clients, and supply certified material to manufacturers, processors, and end users across the globe.
+                  BAR Trading Ltd is a UK-based specialist trading house in non-ferrous metals. We trade high-performance superalloys alongside aluminium, copper, brass, and stainless steel — buying surplus, excess, and off-specification stock from aerospace and industrial clients, and supplying certified material to manufacturers, processors, and end users across the globe.
                 </motion.p>
                 <motion.p variants={rise}>
                   We operate without a physical yard — an asset-light model that keeps us fast, flexible, and cost-competitive. Where material processing is required — cutting to length, re-testing, chemical analysis, or third-party re-certification — we coordinate it through our established network of approved specialist processors.
@@ -64,7 +64,7 @@ export default function About() {
               className="divide-y divide-border pt-2"
             >
               {[
-                { n: "01", title: "We Buy & Sell",            body: "Active buyers of surplus, excess, and off-spec superalloy stock from aerospace OEMs, MROs, and industrial clients. Trusted suppliers to manufacturers and end users worldwide." },
+                { n: "01", title: "We Buy & Sell",            body: "Active buyers of surplus, excess, and off-spec non-ferrous metals — superalloys, aluminium, copper, brass, and stainless — from aerospace OEMs, MROs, and industrial clients. Trusted suppliers to manufacturers and end users worldwide." },
                 { n: "02", title: "Processing Facilitation", body: "No physical yard — but we coordinate cutting, testing, chemical analysis, and third-party re-certification through our network of approved processors when required." },
                 { n: "03", title: "Global Supply Network",   body: "Established relationships with premier mills, stockholders, and processors across Europe, North America, and Asia — ensuring full traceability and provenance." },
                 { n: "04", title: "Technical Credibility",   body: "We speak the language of materials engineers: alloy designations, heat treatment conditions, AMS/ASTM standards, and certification requirements." },
