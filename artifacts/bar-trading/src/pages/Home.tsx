@@ -82,8 +82,8 @@ export default function Home() {
             style={{ borderColor: "hsl(0 0% 82%)" }}
           >
             {[
-              { n: "25+",  label: "Grades Traded" },
-              { n: "7",    label: "Alloy Families" },
+              { n: "30+",  label: "Grades Traded" },
+              { n: "8",    label: "Alloy Families" },
               { n: "5",    label: "Industries Served" },
               { n: "UK",   label: "Based Trading House" },
             ].map((s, i) => (
@@ -224,6 +224,7 @@ export default function Home() {
                   { fam: "Stainless Steel",           gr: "304 / 316 / 321 · 347 · 17-4 PH" },
                   { fam: "Copper",                    gr: "C101 ETP · C110 OFHC · C122 PDO" },
                   { fam: "Brass",                     gr: "CZ108 · CZ121 Free-Cutting · CZ112 Naval" },
+                  { fam: "Aluminium Alloys",          gr: "2024-T3 · 6061-T6 · 7075-T6 · 5083-H111" },
                 ].map((m, i) => (
                   <motion.div key={i} variants={rise} className="py-5 flex items-start justify-between gap-6">
                     <div>

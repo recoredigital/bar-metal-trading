@@ -105,6 +105,7 @@ export default function About() {
               { label: "Stainless Steel", grades: "304 · 316 · 321\n347 · 17-4 PH",                              note: "Austenitic and precipitation-hardening grades for industrial and structural applications." },
               { label: "Copper",          grades: "C101 ETP\nC110 OFHC · C122 PDO",                              note: "High-purity grades for electrical, thermal, and plumbing applications." },
               { label: "Brass",           grades: "CZ108 · CZ121\nCZ112 Naval Brass",                            note: "Copper-zinc alloys for precision machined components, marine, and decorative applications." },
+              { label: "Aluminium",       grades: "2024-T3 · 6061-T6\n7075-T6 · 5083-H111",                        note: "Lightweight high-strength alloys for aerospace, marine, and structural applications." },
             ].map((item, i) => (
               <motion.div key={i} variants={rise} className="px-8 py-8 first:pl-0 last:pr-0" style={{ borderColor: "hsl(0 0% 82%)" }}>
                 <p className="text-[11px] font-semibold tracking-[0.2em] uppercase mb-5" style={{ color: "hsl(0 0% 44%)" }}>{item.label}</p>

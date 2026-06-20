@@ -94,6 +94,19 @@ const families = [
       { name: "CW617N / C38500 — Architectural Brass", props: "High-strength brass with good machinability and a uniform surface finish suitable for anodising and plating.", apps: "Door handles, locks, window fittings, sanitary ware, decorative architectural components." },
     ],
   },
+  {
+    id: "aluminium",
+    label: "08",
+    name: "Aluminium Alloys",
+    summary: "Lightweight, high-strength alloys combining excellent corrosion resistance with outstanding machinability — critical to aerospace, automotive, and marine structures.",
+    alloys: [
+      { name: "2024-T3 / T4",  props: "High-strength aerospace alloy with excellent fatigue resistance. Copper-alloyed for maximum strength; heat treatable.", apps: "Aircraft fuselage skins, wing tension members, structural bulkheads, military vehicle armour." },
+      { name: "6061-T6",       props: "The most versatile general-purpose aluminium alloy. Good strength, excellent corrosion resistance, and outstanding weldability.", apps: "Structural components, marine fittings, automotive parts, bicycle frames, pipelines." },
+      { name: "7075-T6 / T651", props: "Ultra-high strength alloy approaching the tensile strength of mild steel. Principal aerospace structural alloy.", apps: "Aircraft wing spars, fuselage frames, missile components, high-stress tooling." },
+      { name: "5083-H111",      props: "Non-heat-treatable marine-grade alloy with the highest strength of the 5xxx series. Outstanding seawater corrosion resistance.", apps: "Shipbuilding, offshore platforms, cryogenic vessels, pressure vessels, LNG tanker structures." },
+      { name: "2014-T6",        props: "High-strength heat-treatable alloy with good machinability, widely used in aerospace heavy-section forgings.", apps: "Aircraft fittings, wheels, structural parts, military vehicle components." },
+    ],
+  },
 ];
 
 export default function Materials() {
@@ -162,7 +175,7 @@ export default function Materials() {
           {/* Family header */}
           <div className="mb-14 pb-10 border-b border-border flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-              <p className="text-[11px] font-mono text-muted-foreground mb-3">{family.label} / 07</p>
+              <p className="text-[11px] font-mono text-muted-foreground mb-3">{family.label} / 08</p>
               <h2 className="text-3xl md:text-4xl font-extrabold font-heading tracking-tight mb-4">{family.name}</h2>
               <p className="text-muted-foreground font-light max-w-xl leading-relaxed">{family.summary}</p>
             </div>
