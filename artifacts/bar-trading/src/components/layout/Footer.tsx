@@ -38,7 +38,7 @@ export function Footer() {
             <div className="space-y-4 text-sm text-muted-foreground">
               <div>
                 <p className="text-foreground font-medium mb-1">Office</p>
-                <p>United Kingdom</p>
+                <p>England</p>
               </div>
               <div>
                 <p className="text-foreground font-medium mb-1">Enquiries</p>
@@ -51,7 +51,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-muted-foreground tracking-wide">
-          <span>&copy; {new Date().getFullYear()} BAR Trading. United Kingdom.</span>
+          <span>&copy; 2024 BAR Trading. England.</span>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link href="/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link>
