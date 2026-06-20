@@ -106,7 +106,7 @@ export default function Contact() {
                     <MapPin className="text-muted-foreground mt-0.5 flex-shrink-0" size={15} strokeWidth={1.5} />
                     <div>
                       <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-1.5">Office</p>
-                      <p className="text-sm font-light text-foreground/80">United Kingdom</p>
+                      <p className="text-sm font-light text-foreground/80">England, United Kingdom</p>
                     </div>
                   </div>
                   <div className="flex gap-4">

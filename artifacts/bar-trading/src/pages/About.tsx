@@ -135,7 +135,7 @@ export default function About() {
                 We are selective in the relationships we build. We work with clients and suppliers whose standards match our own — technically rigorous, commercially straightforward, and committed to quality at every stage of the supply chain.
               </motion.p>
               <motion.p variants={rise}>
-                BAR Trading Ltd is registered in the United Kingdom. We operate in full compliance with applicable export controls, materials certification requirements, and traceability standards.
+                BAR Trading Ltd is registered in England. We operate in full compliance with applicable export controls, materials certification requirements, and traceability standards.
               </motion.p>
             </div>
           </motion.div>
